@@ -22,20 +22,16 @@ if t==1:
     cursor.execute("SELECT * FROM PHONE where NAME=?",y)
     res=cursor.fetchall() #fetch the values
     tt=len(res)
-    res=np.reshape(-1)
-    arr=res
+    #res=np.reshape(-1)
+    #arr.flatten()
     #arr=np.reshape(res, (np.product(res.shape),))
-    print(arr)
-    #arr=list(res)
-    #print(arr)
-    #length=len(res)
-    #if length==0:
-      #  print("Phone not available")
-    #print("NAME  RAM(GB) CAMERA(MP) OS COLOR\n")   
-    #for i in range(0,len(arr[0])):
-       
-     #   print(arr[0][i])
-        
+    arr=list(res)
+    length=len(res)
+    if length==0:
+       print("Phone not available")
+    print("NAME  RAM(GB) CAMERA(MP) OS COLOR\n")   
+    for i in range(0,len(arr[0])):
+        print(arr[0][i])
         
 #Color blog        
 if t==2:        
